@@ -1,0 +1,67 @@
+add_action( 'frm_field_options', 'my_custom_function' );
+function my_custom_function( $args ) {
+    $field = $args['field'];
+
+    $is_text_input = FrmField::is_field_type( $field, 'table' ); // replace 'text' with the type of the field you need to evaluate - for example: radio, checkbox
+    if ( $is_text_input ) {
+        ?>
+        <p class="frm6 frm_form_field">
+            <label><?php esc_html_e( 'Column Name List(a,b,c)', 'formidable' ); ?></label>
+            <input type="text" class="frm_repeat_limit" name="field_options[custom_column_name_list_<?php echo absint( $field['id'] ); ?>]" value="<?php echo ( isset( $field['custom_column_name_list'] ) ) ? esc_attr( $field['custom_column_name_list'] ) : ''; ?>"/>
+        </p>
+        <?php
+    }
+}
+
+// Save the custom_column_name_list settings
+add_filter( 'frm_update_field_options', 'update_field_options', 10, 3 );
+function update_field_options( $field_options, $field, $values ) {
+    if ( $field->type != 'table' ) {
+        return $field_options;
+    }
+
+    $defaults = array(
+        'custom_column_name_list' => ''
+    );
+
+    foreach ( $defaults as $opt => $default ) {
+        $field_options[ $opt ] = isset( $values['field_options'][ $opt . '_' . $field->id ] ) ? $values['field_options'][ $opt . '_' . $field->id ] : $default;
+    }
+
+    return $field_options;
+}
+
+
+
+add_action( 'frm_field_options', 'my_custom_function2' );
+function my_custom_function2( $args ) {
+    $field = $args['field'];
+
+    $is_text_input = FrmField::is_field_type( $field, 'table' ); // replace 'text' with the type of the field you need to evaluate - for example: radio, checkbox
+    if ( $is_text_input ) {
+        ?>
+        <p class="frm6 frm_form_field">
+            <label><?php esc_html_e( 'Row Name List(a,b,c)', 'formidable' ); ?></label>
+            <input type="text" class="frm_repeat_limit" name="field_options[custom_row_name_list_<?php echo absint( $field['id'] ); ?>]" value="<?php echo ( isset( $field['custom_row_name_list'] ) ) ? esc_attr( $field['custom_row_name_list'] ) : ''; ?>"/>
+        </p>
+        <?php
+    }
+}
+
+// Save the custom_column_name_list settings
+add_filter( 'frm_update_field_options', 'update_field_options2', 10, 3 );
+function update_field_options2( $field_options, $field, $values ) {
+    if ( $field->type != 'table' ) {
+        return $field_options;
+    }
+
+    $defaults = array(
+        'custom_row_name_list' => ''
+    );
+
+    foreach ( $defaults as $opt => $default ) {
+        $field_options[ $opt ] = isset( $values['field_options'][ $opt . '_' . $field->id ] ) ? $values['field_options'][ $opt . '_' . $field->id ] : $default;
+    }
+
+    return $field_options;
+}
