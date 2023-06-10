@@ -91,7 +91,7 @@ class FrmPlusFieldsHelper{
 	 * Adds the Table field type to the list of available fields
 	 */
 	function add_plus_fields($fields){
-		$fields['table'] = 'Table';
+		$fields['table'] = array('name' => "Table", 'icon' => "frm_icon frm_upload_icon", 'message' => 'Add configurable table field to form');
 		return $fields;
 	}
     
