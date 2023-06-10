@@ -1,0 +1,82 @@
+.frm_form_fields:not(.frm_sample_form) select.frmplus_field_type{
+	width:auto;
+	font-size:10px;
+	vertical-align:middle;
+}
+.frm_form_fields:not(.frm_sample_form) .frmplus_options_form input,
+.frm_form_fields:not(.frm_sample_form) .frmplus_options_form select{
+	width:auto;
+}
+.frmplus_options_form{
+	padding:1em;
+	margin:0.5em 0.5em 0.5em 35px;
+	max-width:400px;
+	display:none;
+	background:white;
+	border:1px solid #ccc;
+}
+.frm_single_option .icon16{
+	float:none;
+	width:1em;
+	padding:0;
+	margin:0;
+	cursor:pointer;
+}
+.frm_single_option .icon16:before{
+	height: 1em;
+	padding: 0;
+	vertical-align: middle;
+	color:#A0A0A0;
+	-webkit-transition: -webkit-transform 0;
+	-moz-transition: -moz-transform 0;
+	transition: transform 0;
+}
+.frmplus_field_options:before {
+	content: "\f111";
+}
+.frm_single_option .icon16.working:before{
+	content: "\f321";
+	transform:rotate(-3600deg);
+	-ms-transform:rotate(-3600deg); /* IE 9 */
+	-webkit-transform:rotate(-3600deg); /* Opera, Chrome, and Safari */
+	-webkit-transition: -webkit-transform 10s linear;
+	-moz-transition: -moz-transform 10s linear;
+	transition: transform 10s linear;
+}
+.frm_form_fields:not(.frm_sample_form) .frmplus_options_form .datepicker-option input[type="text"],
+.frm_form_fields:not(.frm_sample_form) .frmplus_options_form .datepicker-option select{
+	width:30%;
+	vertical-align:middle;
+}
+.frm_form_fields:not(.frm_sample_form) .frmplus_options_form .datepicker-option{
+	margin-bottom:0.5em;
+}
+.frmplus_options_form .section{
+	border:1px solid #ccc;
+	padding:0.5em;
+	margin-bottom: 0.5em;
+}
+.dynamic-table-options{
+	border: 1px solid #d1e5ee;
+	padding: 15px;
+	background: #fafafa;
+	line-height:3em;
+}
+.dynamic-options label{
+	display:inline-block;
+	width:200px;
+}
+.dynamic-options label.auto_width{
+	width:auto;
+}
+.frm_remove_other:before {
+	content: '\e600';
+	vertical-align: middle;
+}
+.frm_add_other:before {
+	content: '\e602';
+	vertical-align: middle;
+}
+.frm_move_field:before {
+  content: '\e61a';
+}

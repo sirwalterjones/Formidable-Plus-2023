@@ -1,0 +1,102 @@
+.frm-table{
+	border-collapse:collapse;
+	border:1px solid black;
+	margin-right:10px;
+}
+
+.frm-table td, .frm-table th{
+	padding:5px;
+	border:1px solid black;
+	vertical-align:top;
+}
+.frm-table select{
+	width:auto !important;
+}
+.frm-table select.frm_chzn{
+	min-width:100px;
+}
+.form-wrap .frm-table label{
+	display: inline;
+}
+.frmplus-wrapper p{
+	margin-top:5px;
+	margin-bottom:0px;
+}
+
+.frmplus-wrapper table{
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+
+.frmplus-wrapper table td, .frmplus-wrapper table th{
+	border:1px solid black;
+	vertical-align:top;
+	padding:10px;
+}
+
+.frmplus-wrapper table th{
+	white-space:nowrap;
+}
+
+.frmplus-wrapper table tr.odd td{
+	background:#eee;
+}
+
+.frmplus-wrapper table ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+.frmplus-wrapper table ul li{
+	margin:0px;
+	padding:0px;
+}
+
+.frm-table-container .frmplus-add-row.loading{
+	padding-right:20px;
+	background:url(images/ajax_loader.gif) 100% 50% no-repeat;
+}
+.with_frm_style .frm-table input.calculation,
+.frm-table input.calculation,
+.with_frm_style .frm-table input.readonly,
+.frm-table input.readonly,
+.with_frm_style .frm-table textarea.readonly,
+.frm-table textarea.readonly,
+.with_frm_style .readonly input[readonly],
+.with_frm_style .readonly input[readonly]:focus,
+.with_frm_style .readonly textarea[readonly],
+.with_frm_style .readonly textarea[readonly]:focus,
+.with_frm_style .frm-table input.calculation:focus,
+.with_frm_style .frm-table input.readonly:focus,
+.with_frm_style .frm-table textarea.readonly:focus,
+.with_frm_style input[readonly].calculation,
+.with_frm_style input[readonly].calculation:focus
+{
+	background:transparent;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	border:none;
+	color:inherit !important;
+	width:100%;
+	min-width:100px;
+}
+.with_frm_style .frm-table textarea.readonly,
+.frm-table textarea.readonly{
+	overflow:hidden;
+	resize:none;
+	width:100%;
+	min-width:200px;
+}
+.with_frm_style .frm-table label{
+	display:block;
+}
+.ui-sortable-placholder{
+	visibility: visible !important;
+}
+.ui-sortable-helper{
+	background:#F5F5F5;
+}
+.entry-content .frm-table-container a img{
+	display:inline;
+}
